@@ -2,6 +2,8 @@ package Main;
 
 public class Parameters
 {
+    public static int MAXLEVEL = 100;
+
     // Basically equivalent of Ability Scores from D&D -- Resist and Special's specific use are TBD.
     public enum Abilities
     {
