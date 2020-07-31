@@ -52,4 +52,24 @@ public class StatBlock
                 AbilityScores[i] = AbilityScoreMax[i];
         }
     }
+
+    public int getExperience() { return experience; }
+    public int getTotalLevel() { return level; }
+
+    public String getCharName() { return charName; }
+    public String getRaceName() { return charRace.getRaceName(); }
+    public String getRaceType() { return charRace.getRaceTag().toString(); }
+
+    public int[] getAbilityScores() { return AbilityScores; }
+    public int getAbilityScore(int abilityIndex) { return AbilityScores[abilityIndex]; }
+    public int[] getMaxAbilityScores() { return AbilityScoreMax; }
+    public int getMaxAbilityScore(int abilityIndex) { return AbilityScoreMax[abilityIndex]; }
+
+    public String getJobAtLevel(int levelI)
+    {
+        if(levelI <= level && levelI > 0)
+            return jobLevels[levelI-1];
+        else
+            return null;
+    }
 }
