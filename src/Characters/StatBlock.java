@@ -1,5 +1,6 @@
 package Characters;
 
+import Database.LevelingSystem;
 import Main.Parameters.*;
 
 public class StatBlock
@@ -71,5 +72,16 @@ public class StatBlock
             return jobLevels[levelI-1];
         else
             return null;
+    }
+
+    public void giveExperience(int newExp)
+    {
+        experience += newExp;
+
+        if(LevelingSystem.levelUpCheck(experience,level))
+        {
+            System.out.println("You meet the requirements to level up.");
+        }
+        System.out.println("Current EXP: " + experience);
     }
 }

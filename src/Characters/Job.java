@@ -10,6 +10,8 @@ public class Job
     private int maxLevel;
     private int AbilityScores[];
 
+    private static int REFERENCE_ID;
+
     public Job(String name, ClassRarity rarity, JobClassification classif, int abilities[])
     {
         jobName = name;

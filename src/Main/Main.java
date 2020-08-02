@@ -1,5 +1,6 @@
 package Main;
 
+import Database.LevelingSystem;
 import Main.Parameters.*;
 
 public class Main
@@ -10,5 +11,11 @@ public class Main
 
         CharacterSheet characterSheet = new CharacterSheet();
         characterSheet.OutputSheet();
+
+        LevelingSystem.buildLevelCurve();
+        characterSheet.MainCharacter.giveExperience(150);
+        characterSheet.MainCharacter.giveExperience(150);
+        characterSheet.MainCharacter.giveExperience(150);
+        characterSheet.MainCharacter.giveExperience(150);
     }
 }
